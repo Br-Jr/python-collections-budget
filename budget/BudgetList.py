@@ -32,8 +32,9 @@ def main():
     expenses.read_expenses("data/spending_data.csv")
     for expense in expenses.list:
         myBudgetList.append(expense.amount)
-    print("The count of all expenses: " + str(len(myBudgetList)))
-
+    print("The count of all expenses:" + str(len(myBudgetList)))
+    for entry in myBudgetList:
+        print(entry)
 
     fig, ax = plt.subplots()
     labels = ['Expenses', 'Overages', 'Budget']
